@@ -37,10 +37,8 @@ class ConfigPage extends React.Component<IProps, IState> {
         const menuList: any[] = [userChoices[0]];
         checkedList.forEach(i => {
             const item = _.find(userChoices, {displayName:i});
-            console.log(item);
             item && menuList.push(item);
         })
-     console.log(menuList);
      this.props.setUserSelections(checkedList);
      this.props.setUserChoices(menuList);
     };

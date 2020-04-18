@@ -16,8 +16,7 @@ interface IPageLayoutProps {
 };
 
 const PageLayout: React.FC<IPageLayoutProps> = (props: IPageLayoutProps) => {   
-    console.log(props.collapsed);
-        return ( <Layout className="site-layout">
+  return ( <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0}}>
           {React.createElement(props.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
@@ -40,7 +39,7 @@ const PageLayout: React.FC<IPageLayoutProps> = (props: IPageLayoutProps) => {
          </Switch>
         </Content>
       </Layout>);
-        }
+}
 
 export default PageLayout;
 

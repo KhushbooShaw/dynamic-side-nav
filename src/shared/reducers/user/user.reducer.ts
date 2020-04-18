@@ -1,4 +1,4 @@
-import { IUserResponse } from 'shared/models/user.model';
+import { IUser } from 'shared/models/user.model';
 import axios from 'axios';
 import { REQUEST, SUCCESS, FAILURE } from 'shared/reducers/action-type';
 import { userChoices } from 'shared/utilities/constants';
@@ -11,7 +11,7 @@ export const ACTION_TYPES = {
   
   export const initialState = {
     loading: false,
-    users: {} as IUserResponse,
+    users: {} as IUser,
     userChoice: userChoices,
     userSelections: []
   };
@@ -58,7 +58,7 @@ export const ACTION_TYPES = {
    
   export const getEntities = () => ({
     type: ACTION_TYPES.FETCH_ALL_USERS,
-    payload: axios.get<IUserResponse>(apiUrl)
+    payload: axios.get<IUser>(apiUrl)
   });
 
   export const setUserChoices = (userChoices:any[]=[]) => ({
